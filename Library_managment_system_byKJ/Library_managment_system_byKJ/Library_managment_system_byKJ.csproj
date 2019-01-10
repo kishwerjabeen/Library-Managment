@@ -1,0 +1,484 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B4A79C12-00F0-4BFC-AD98-D03BC50B69C8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Library_managment_system_byKJ</RootNamespace>
+    <AssemblyName>Library_managment_system_byKJ</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="add_Books_admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_Books_admin.Designer.cs">
+      <DependentUpon>add_Books_admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="add_usser_by_admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_usser_by_admin.Designer.cs">
+      <DependentUpon>add_usser_by_admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Book_del.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Book_del.Designer.cs">
+      <DependentUpon>Admin_Book_del.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin_book_issue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin_book_issue.Designer.cs">
+      <DependentUpon>admin_book_issue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin_home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin_home.Designer.cs">
+      <DependentUpon>admin_home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin_home_main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin_home_main.Designer.cs">
+      <DependentUpon>admin_home_main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin_return_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin_return_form.Designer.cs">
+      <DependentUpon>admin_return_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin_search_books.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin_search_books.Designer.cs">
+      <DependentUpon>admin_search_books.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class1.cs" />
+    <Compile Include="CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DALS.cs" />
+    <Compile Include="DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="emp_add_by_Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="emp_add_by_Admin.Designer.cs">
+      <DependentUpon>emp_add_by_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="emp_del.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="emp_del.Designer.cs">
+      <DependentUpon>emp_del.cs</DependentUpon>
+    </Compile>
+    <Compile Include="emp_home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="emp_home.Designer.cs">
+      <DependentUpon>emp_home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="emp_home_main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="emp_home_main.Designer.cs">
+      <DependentUpon>emp_home_main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="emp_update_info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="emp_update_info.Designer.cs">
+      <DependentUpon>emp_update_info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="emp_view_info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="emp_view_info.Designer.cs">
+      <DependentUpon>emp_view_info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="emp_view_update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="emp_view_update.Designer.cs">
+      <DependentUpon>emp_view_update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="report_book_remain_retain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="report_book_remain_retain.Designer.cs">
+      <DependentUpon>report_book_remain_retain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="stock_book_record.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="stock_book_record.Designer.cs">
+      <DependentUpon>stock_book_record.cs</DependentUpon>
+    </Compile>
+    <Compile Include="s_add_books.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="s_add_books.Designer.cs">
+      <DependentUpon>s_add_books.cs</DependentUpon>
+    </Compile>
+    <Compile Include="s_add_studnet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="s_add_studnet.Designer.cs">
+      <DependentUpon>s_add_studnet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="s_book_issue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="s_book_issue.Designer.cs">
+      <DependentUpon>s_book_issue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="s_del_books.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="s_del_books.Designer.cs">
+      <DependentUpon>s_del_books.cs</DependentUpon>
+    </Compile>
+    <Compile Include="s_return_book.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="s_return_book.Designer.cs">
+      <DependentUpon>s_return_book.cs</DependentUpon>
+    </Compile>
+    <Compile Include="s_search_books.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="s_search_books.Designer.cs">
+      <DependentUpon>s_search_books.cs</DependentUpon>
+    </Compile>
+    <Compile Include="s_Std_del.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="s_Std_del.Designer.cs">
+      <DependentUpon>s_Std_del.cs</DependentUpon>
+    </Compile>
+    <Compile Include="s_stock_book_reco_email.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="s_stock_book_reco_email.Designer.cs">
+      <DependentUpon>s_stock_book_reco_email.cs</DependentUpon>
+    </Compile>
+    <Compile Include="s_update_books.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="s_update_books.Designer.cs">
+      <DependentUpon>s_update_books.cs</DependentUpon>
+    </Compile>
+    <Compile Include="s_update_books_view.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="s_update_books_view.Designer.cs">
+      <DependentUpon>s_update_books_view.cs</DependentUpon>
+    </Compile>
+    <Compile Include="s_update_std_Info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="s_update_std_Info.Designer.cs">
+      <DependentUpon>s_update_std_Info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="s_update_std_info_view.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="s_update_std_info_view.Designer.cs">
+      <DependentUpon>s_update_std_info_view.cs</DependentUpon>
+    </Compile>
+    <Compile Include="s_view_studnets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="s_view_studnets.Designer.cs">
+      <DependentUpon>s_view_studnets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="update_book.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="update_book.Designer.cs">
+      <DependentUpon>update_book.cs</DependentUpon>
+    </Compile>
+    <Compile Include="update_book_view.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="update_book_view.Designer.cs">
+      <DependentUpon>update_book_view.cs</DependentUpon>
+    </Compile>
+    <Compile Include="update_student_info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="update_student_info.Designer.cs">
+      <DependentUpon>update_student_info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usser_del_by_Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="usser_del_by_Admin.Designer.cs">
+      <DependentUpon>usser_del_by_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usser_home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usser_home.Designer.cs">
+      <DependentUpon>Usser_home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view_student_info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view_student_info.Designer.cs">
+      <DependentUpon>view_student_info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view_Update_Usser_.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view_Update_Usser_.Designer.cs">
+      <DependentUpon>view_Update_Usser_.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="add_Books_admin.resx">
+      <DependentUpon>add_Books_admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_usser_by_admin.resx">
+      <DependentUpon>add_usser_by_admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_Book_del.resx">
+      <DependentUpon>Admin_Book_del.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin_book_issue.resx">
+      <DependentUpon>admin_book_issue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin_home.resx">
+      <DependentUpon>admin_home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin_home_main.resx">
+      <DependentUpon>admin_home_main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin_return_form.resx">
+      <DependentUpon>admin_return_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin_search_books.resx">
+      <DependentUpon>admin_search_books.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="emp_add_by_Admin.resx">
+      <DependentUpon>emp_add_by_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="emp_del.resx">
+      <DependentUpon>emp_del.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="emp_home.resx">
+      <DependentUpon>emp_home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="emp_home_main.resx">
+      <DependentUpon>emp_home_main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="emp_update_info.resx">
+      <DependentUpon>emp_update_info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="emp_view_info.resx">
+      <DependentUpon>emp_view_info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="emp_view_update.resx">
+      <DependentUpon>emp_view_update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="report_book_remain_retain.resx">
+      <DependentUpon>report_book_remain_retain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stock_book_record.resx">
+      <DependentUpon>stock_book_record.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="s_add_books.resx">
+      <DependentUpon>s_add_books.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="s_add_studnet.resx">
+      <DependentUpon>s_add_studnet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="s_book_issue.resx">
+      <DependentUpon>s_book_issue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="s_del_books.resx">
+      <DependentUpon>s_del_books.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="s_return_book.resx">
+      <DependentUpon>s_return_book.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="s_search_books.resx">
+      <DependentUpon>s_search_books.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="s_Std_del.resx">
+      <DependentUpon>s_Std_del.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="s_stock_book_reco_email.resx">
+      <DependentUpon>s_stock_book_reco_email.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="s_update_books.resx">
+      <DependentUpon>s_update_books.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="s_update_books_view.resx">
+      <DependentUpon>s_update_books_view.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="s_update_std_Info.resx">
+      <DependentUpon>s_update_std_Info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="s_update_std_info_view.resx">
+      <DependentUpon>s_update_std_info_view.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="s_view_studnets.resx">
+      <DependentUpon>s_view_studnets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="update_book.resx">
+      <DependentUpon>update_book.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="update_book_view.resx">
+      <DependentUpon>update_book_view.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="update_student_info.resx">
+      <DependentUpon>update_student_info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usser_del_by_Admin.resx">
+      <DependentUpon>usser_del_by_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usser_home.resx">
+      <DependentUpon>Usser_home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view_student_info.resx">
+      <DependentUpon>view_student_info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view_Update_Usser_.resx">
+      <DependentUpon>view_Update_Usser_.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\background.jpg" />
+    <Content Include="images\if_book_text_stop_103416.png" />
+    <Content Include="images\if_editprofile_101844.png" />
+    <Content Include="images\if_General_Office_35_2530788.png" />
+    <Content Include="images\if_General_Office_36_2530817.png" />
+    <Content Include="images\if_holiday-no-camera_3211425.png" />
+    <Content Include="images\if_user_accounts_help_67351.png" />
+    <None Include="images\newback - Copy.jpg" />
+    <Content Include="images\if_x-office-address-book_118894.png" />
+    <Content Include="images\newback.jpg" />
+    <Content Include="images\solid-abstract-colors-3.jpg" />
+    <Content Include="images\timthumb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="std_images\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
